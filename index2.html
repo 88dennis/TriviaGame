@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TriviaGame</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body>
+
+	<div></div>
+
+	<br>
+
+	<button id="stop">Stop</button>
+	<button id="resume">Resume</button>
+
+
+
+	<div id="startDiv">
+		<button id="start">
+			start
+		</button>
+	</div>
+
+	<div id="div1">
+		<input type="radio" name="dennis">
+		<label>Dennis: </label>
+
+		<input type="radio" name="dennis">
+		<label>Dennis: </label>
+
+		<input type="radio" name="dennis">
+		<label>Den: </label>
+
+		<input type="radio" name= "dennis">
+		<label>Den: </label>
+		<input type="radio" name="dennis">
+		<label>sarms: </label>
+
+		<input type="radio" name="dennis">
+		<label>sarms: </label>
+
+		<div id="doneDiv"><button id="done">done</button></div>
+	</div>
+
+	<div id="resultsPage">
+		wqerowenqweroqweroqiwe
+		asdfaodifqoweihrouwqehruqwehrqwheroiqwhero
+	</div>
+
+				<!-- jQuery -->
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+				<!-- Script -->
+				<script type="text/javascript">
+
+
+
+					var number = 100;
+					var intervalId;
+					var isRunning = false;
+
+					$("#stop").on("click", stop);
+
+					$("#resume").on("click", run);
+
+					function run() {
+
+						if(!isRunning){
+							isRunning = true;
+							intervalId = setInterval(decrement, 1000);
+						}
+					}
+
+					function decrement() {
+
+						number--;
+
+						$("#show-number").html("<h2>" + number + "</h2>");
+
+						if (number === 0) {
+
+							stop();
+
+							alert("Time Up!");
+
+							number = 100;
+						}
+					}
+
+					function stop() {
+						if(isRunning){
+							isRunning = false;
+							clearInterval(intervalId);
+
+						}
+					}
+
+					run();
+
+
+					document.getElementById("start").onclick=function(){
+						document.getElementById("div1").style.display="block";
+						document.getElementById("startDiv").style.display="none";
+					}
+
+					document.getElementById("done").onclick=function(){
+						document.getElementById("div1").style.display="none";
+						document.getElementById("startDiv").style.display="none";
+						document.getElementById("resultsPage").style.display="block";
+
+					}
+
+
+				</script>
+
+			</body>
+
+			</html>
