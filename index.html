@@ -13,7 +13,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Coming+Soon|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css?family=Bangers|Passion+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Gaegu|Nothing+You+Could+Do|Ruda|ZCOOL+KuaiLe" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -21,223 +25,125 @@
 
 <body>
 
-<div class="titolo">
-  
-  <button class="btn btn1 btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-              <h1 class="display-4">POP QUIZ</h1>
-            </button>
-          </p>
-          <div class="collapse collapse1" id="collapseExample">
-            <div class="card card-body card1">
-              <h1 class="display-4">Goodluck!!!</h1>
-            </div>
-          </div>
+  <div class="titolo">
+
+    <button class="btn btn1 btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      <h1 class="display-4">POP QUIZ</h1>
+    </button>
+  </p>
+  <div class="collapse collapse1" id="collapseExample">
+    <div class="card card-body card1">
+      <h1 class="display-4">Goodluck!!!</h1>
+    </div>
+  </div>
 </div>
 
+<div id="startDiv">
 
-  <div id="startDiv">
+  <div class="startWrap"><button id="start" type="button" class="btn btn-warning"><h2>START</h2></button></div>
 
-<div class="startWrap"><button id="start" type="button" class="btn btn-warning"><h3>START</h3></button></div>
-    
-  </div>
+</div>
 
 <div class="timewrap">
-<div id="timeLeft"><button id="timeButton" type="button" class="btn btn-success"><h1>TIME LEFT: <span id="show-number"></span></h1></button></div>
+  <div id="timeLeft"><button id="timeButton" type="button" class="btn btn-success"><h1>TIME LEFT: <span id="show-number"></span></h1></button></div>
 </div>
-  <div id="div1">
+<div id="div1">
 
-<div class="formwrap">
+  <div class="formwrap">
 
-    <form class="form1" name="wholeQuiz">
+    <form id="myForm" class="form1" name="wholeQuiz">
 
       <div id="quiz1">
-        <h3>What is the value of myValue after running the code below? var myValue = 0; var myArray = [1, 2, 3, 4]; for (var i = 1; i < myArray.length; i++) { myValue += myArray[i]; }</h3>
-        <input id="Ans1" type="radio" name="firstRow" value="ansA">
+        <h3 class="question">What is the value of myValue after running the code below? var myValue = 0; var myArray = [1, 2, 3, 4]; for (var i = 1; i < myArray.length; i++) { myValue += myArray[i]; }</h3>
+        <input class="radiobtn" id="Ans1" type="radio" name="firstRow" value="ansA">
         <label>9 </label>
 
-        <input id="Ans2" type="radio" name="firstRow" value="ansB">
+        <input class="radiobtn" id="Ans2" type="radio" name="firstRow" value="ansB">
         <label>10 </label>
 
-        <input id="Ans2"type="radio" name="firstRow" value="ansC">
+        <input class="radiobtn" id="Ans2"type="radio" name="firstRow" value="ansC">
         <label>11 </label>
 
-        <input id="Ans2"type="radio" name= "firstRow" value="ansD">
+        <input class="radiobtn" id="Ans2"type="radio" name= "firstRow" value="ansD">
         <label>12 </label>
       </div>
 
+      <br>
       <div id="quiz2">
 
-        <h3>A function's ____ are only visible inside the function body.</h3>
-        <input type="radio" name="secondRow" value="ansA"> 
+        <h3 class="question">A function's ____ are only visible inside the function body.</h3>
+        <input class="radiobtn" type="radio" name="secondRow" value="ansA"> 
         <label>arrays </label>
 
-        <input type="radio" name="secondRow" value="ansB">
+        <input class="radiobtn" type="radio" name="secondRow" value="ansB">
         <label>arguments</label>
 
-        <input type="radio" name="secondRow" value="ansC">
+        <input class="radiobtn" type="radio" name="secondRow" value="ansC">
         <label>strings </label>
 
-        <input type="radio" name= "secondRow" value="ansD">
-        <label>definition </label>
+        <input class="radiobtn" type="radio" name= "secondRow" value="ansD">
+        <label>definition </label>  
       </div>
+      <br>
 
       <div id="quiz3">
-        <h3>To grab the first letter of a string we can use the ____ method.</h3>
-        <input type="radio" name="thirdRow" value="ansA">
+        <h3 class="question">To grab the first letter of a string we can use the ____ method.</h3>
+        <input class="radiobtn" type="radio" name="thirdRow" value="ansA">
         <label>indexOf(1) </label>
 
-        <input type="radio" name="thirdRow" value="ansB">
+        <input class="radiobtn" type="radio" name="thirdRow" value="ansB">
         <label>itemIs(1) </label>
 
-        <input type="radio" name="thirdRow" value="ansC">
+        <input class="radiobtn" type="radio" name="thirdRow" value="ansC">
         <label>stringItem(0) </label>
 
-        <input type="radio" name= "thirdRow" value="ansD">
+        <input class="radiobtn" type="radio" name= "thirdRow" value="ansD">
         <label>charAt(0) </label>
       </div>
-
+      <br>
       <div id="quiz4">
-        <h3>What will the following code log to the console? var myArray = []; for (var i = 0; i < 10; i++) { if (i % 2 == 0) { myArray.push(i); } } console.log(myArray);</h3>
-        <input type="radio" name="fourthRow" value="ansA">
+        <h3 class="question">What will the following code log to the console? var myArray = []; for (var i = 0; i < 10; i++) { if (i % 2 == 0) { myArray.push(i); } } console.log(myArray);</h3>
+        <input class="radiobtn" type="radio" name="fourthRow" value="ansA">
         <label>[2, 4, 6, 8, 10] </label>
 
-        <input type="radio" name="fourthRow" value="ansB">
+        <input class="radiobtn" type="radio" name="fourthRow" value="ansB">
         <label>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] </label>
 
-        <input type="radio" name="fourthRow" value="ansC">
+        <input class="radiobtn" type="radio" name="fourthRow" value="ansC">
         <label>[0, 2, 4, 6, 8] </label>
 
-        <input type="radio" name= "fourthRow" value="ansD">
+        <input class="radiobtn" type="radio" name= "fourthRow" value="ansD">
         <label>[1, 3, 5, 7, 9] </label>
       </div>
     </form>
-    </div>
-
-
-    <div id="doneDiv">
-
-        <div class="donewrap1"><button id="done" type="button" class="btn btn-success"><h1>DONE</h1></button></div>
-</div>
-
   </div>
 
+
+  <div id="doneDiv">
+    <div class="donewrap1"><button id="done" type="button" class="btn btn-dark"><h1>DONE</h1></button></div>
+  </div>
+
+</div>
+
+<div class="resultswrap">
 
   <div id="resultsPage">
 
-    <h1 class="textresults">CORRECT: <span id="correct"></span></h1>
-    <h1 class="textresults">WRONG: <span id="wrong"></span></h1>
-    <h1 class="textresults">BLANK: <span id="blank"></span></h1>
-   
+    <h1 class="textresults">CORRECT :  <span id="correct"></span></h1>
+    <h1 class="textresults">WRONG :  <span id="wrong"></span></h1>
+    <h1 class="textresults">BLANK :  <span id="blank"></span></h1>
+    <div class="reloadDiv"><button id="reload" type="button" class="btn reloadbtn btn-warning"><h3>RELOAD</h3></button></div>
+
   </div>
+</div>
 
+<!-- jQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!-- jQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Script -->
+<script type="text/javascript" src="./assets/javascript/app.js">
 
-  <!-- Script -->
-  <script type="text/javascript">
-
-
-    window.onload = function() {
-      $("#start").on("click", start);
-      $("#done").on("click", stop);
-    };
-    var number = 40;
-    var intervalId;
-    var isRunning = false;
-    var correctAnswer = 0;
-    var incorrectAnswer = 0;
-    var unanswered = 0;
-
-    
-    function start() {
-      if(!isRunning) {
-        intervalId = setInterval(decrement, 1000);
-        isRunning = true;
-      }
-    }
-
-    function gradeQuiz() {
-      var firstAnswer = document.forms.wholeQuiz.firstRow.value;
-      var secondAnswer = document.forms.wholeQuiz.secondRow.value;
-      var thirdAnswer = document.forms.wholeQuiz.thirdRow.value;
-      var fourthAnswer = document.forms.wholeQuiz.fourthRow.value;
-
-      if(firstAnswer=="ansA"){correctAnswer = correctAnswer + 1
-      }
-      else if(firstAnswer == ""){unanswered = unanswered + 1
-      }
-      else{incorrectAnswer = incorrectAnswer + 1};
-
-      
-      if(secondAnswer=="ansB"){correctAnswer = correctAnswer + 1
-      }
-      else if(secondAnswer == ""){unanswered = unanswered + 1
-      }
-      else{incorrectAnswer = incorrectAnswer + 1};
-
-
-      if(thirdAnswer=="ansD"){correctAnswer = correctAnswer + 1
-      }
-      else if(thirdAnswer == ""){unanswered = unanswered + 1
-      }
-      else{incorrectAnswer = incorrectAnswer + 1};
-
-      if(fourthAnswer=="ansC"){correctAnswer = correctAnswer + 1
-      }
-      else if(fourthAnswer == ""){unanswered = unanswered + 1
-      }
-      else{incorrectAnswer = incorrectAnswer + 1};
-
-        $("#correct").text(correctAnswer);
-        $("#wrong").text(incorrectAnswer);
-        $("#blank").text(unanswered);
-    }
-
-
-
-
-    function decrement() {
-
-      number--;
-
-      $("#show-number").html("<h2>" + number + "</h2>");
-
-      if (number === 0) {
-
-        stop();
-
-        document.getElementById("resultsPage").style.display="block";
-        document.getElementById("div1").style.display="none";
-        document.getElementById("startDiv").style.display="block";
-
-        number = 40;
-      }
-    }
-
-    function stop() {
-      if(isRunning){
-        isRunning = false;
-        clearInterval(intervalId);
-        gradeQuiz()
-
-      }
-    }
-
-
-      document.getElementById("start").onclick=function(){
-      document.getElementById("div1").style.display="block";
-      document.getElementById("startDiv").style.display="none";
-      document.getElementById("timeLeft").style.display="block";
-    }
-
-    document.getElementById("done").onclick=function(){
-      document.getElementById("div1").style.display="none";
-      document.getElementById("startDiv").style.display="block";
-      document.getElementById("resultsPage").style.display="block";
-
-    }
-  </script>
+</script>
 
 </body>
 
