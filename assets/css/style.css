@@ -61,8 +61,26 @@ body {
   font-family: 'Gaegu', cursive;
 }
 
-h1 {
+.display-4 {
   text-align: center;
+  font-family: 'Bangers', cursive;
+}
+
+.timefont {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+} 
+
+.textresults {
+  font-family: 'Bangers', cursive;
+}
+
+
+#donefont {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+}
+#show-number {
   font-family: 'Bangers', cursive;
 }
 
@@ -73,12 +91,11 @@ h1 {
   margin: 20px;
 }
 
-h3 {
+#startfont {
   font-family:'Bangers', cursive;
-  color: white;
 }
 
-h2 {
+#reloadfont {
   font-family:'Bangers', cursive;
 }
 
@@ -115,9 +132,3 @@ label {
 .reloadbtn {
   width: 200px;
 }
-
-
-
-
-
-
